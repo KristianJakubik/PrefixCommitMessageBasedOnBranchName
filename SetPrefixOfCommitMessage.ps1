@@ -7,8 +7,7 @@ function GetCurrentCommitMessage {
 }
 
 function GetBranchPrefix {
-    # $branchName = git rev-parse --abbrev-ref HEAD
-    $branchName = "feature/KCL-2196_repository_for_role_config_data"
+    $branchName = git rev-parse --abbrev-ref HEAD
     $matches = $branchName | Select-String -Pattern '(\w+-\d+)'
     $prefix = $matches.Matches[0].Groups[1].Value
 
