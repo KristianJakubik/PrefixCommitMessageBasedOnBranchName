@@ -17,7 +17,7 @@ function GetBranchPrefix {
 function CheckIfContainsPrefix {
     param([string] $message, [string] $prefix)
     
-    return $message.StartsWith($prefix)
+    return $message -match '^\w+-\d+'
 }
 
 function SetPrefix{
